@@ -18,7 +18,7 @@ h2 {
   font-size: 24px;
   font-size: 2.4em;
 }
-/* 
+
 body {
   display: flex;
   flex-direction: column;
@@ -27,7 +27,6 @@ body {
   gap: 50vh;
 }
 
- */
 .hero {
   background-color: hsl(0, 79%, 90%);
   height: 50vh;
@@ -36,15 +35,6 @@ body {
   grid-template-areas: 'content';
   place-items: center;
   width: 100%;
-}
-
-.test {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-template-areas:
-    'logo . burger'
-    '. title burger';
 }
 
 .hero__image {
@@ -74,7 +64,7 @@ body {
 }
 
 .team__img {
-  width: 60vw;
+  width: 40vh;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
