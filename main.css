@@ -1,0 +1,140 @@
+:root {
+  font-size: 10px;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-size: 3.2rem;
+  font-size: 32px;
+}
+h2 {
+  font-size: 2.4rem;
+  font-size: 24px;
+  font-size: 2.4em;
+}
+/* 
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  gap: 50vh;
+}
+
+ */
+.hero {
+  background-color: hsl(0, 79%, 90%);
+  height: 50vh;
+  padding: 0 10vw;
+  display: grid;
+  grid-template-areas: 'content';
+  place-items: center;
+  width: 100%;
+}
+
+.test {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    'logo . burger'
+    '. title burger';
+}
+
+.hero__image {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  grid-area: content;
+  object-fit: cover;
+}
+
+.hero__title {
+  grid-area: content;
+  font-size: 5rem;
+  text-align: center;
+  margin: 1.5em 0;
+  color: white;
+  background-color: hsla(0 0% 0% / 0.65);
+  width: fit-content;
+  height: fit-content;
+}
+
+.team {
+  display: flex;
+  justify-content: center;
+  width: 90vw;
+}
+
+.team__img {
+  width: 60vw;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.travel-card__container {
+  display: flex;
+  justify-content: center;
+  gap: 2vw;
+  padding-bottom: 10vh;
+}
+
+.travel-card__image {
+  height: 40%;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.travel-card {
+  height: 60vh;
+  border-radius: 10px;
+  aspect-ratio: 3 / 4;
+  border: 1.5px solid hsl(44, 0%, 80%);
+  overflow: hidden;
+  padding-bottom: 5vh;
+  position: relative;
+}
+
+.travel-card__new {
+  font-size: 2rem;
+  color: white;
+  background-color: hsl(270, 50%, 60%);
+  width: fit-content;
+  padding: 0.5em 1.5em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.travel-card__title {
+  font-size: 4rem;
+  text-align: center;
+  margin: 1.5em 0;
+  color: hsl(270, 50%, 60%);
+}
+
+.travel-card__duration {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 1em 0;
+  color: hsl(44, 100%, 51%);
+}
+
+.travel-card__price {
+  text-align: center;
+  font-size: 2.5rem;
+  color: hsla(44 100% 50% / 0.65);
+}
+
+.travel-card__price:after {
+  content: '$';
+  padding-left: 0.2em;
+}
