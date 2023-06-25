@@ -1,0 +1,15 @@
+- `display: grid`
+	- good grid learning site
+		- https://www.quackit.com/css/grid/tutorial/create_a_grid.cfm
+- `grid-template-columns`
+	- https://www.w3schools.com/css/tryit.asp?filename=trycss_grid
+	- `grid-template-columns: auto auto auto auto;`
+	- `grid-template-columns: 100px 100px 1fr;`
+- `grid-template-rows` and `grid-template-columns`
+	- https://www.quackit.com/html/html_editors/scratchpad/?example=/css/grid/tutorial/create_a_grid 
+- `grid-gap`
+	- grid-gap and gap the same in grid:
+		- https://www.w3schools.com/css/css_grid.asp		
+- `minmax([min], [max])`
+	- https://codepen.io/hkdc/pen/yXjNgq
+- `grid-template-columns: repeat(4, 1fr);`

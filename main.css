@@ -1,130 +1,91 @@
-:root {
-  font-size: 10px;
-  font-size: 62.5%;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.container {
-  font-size: 3.2rem;
-  font-size: 32px;
-}
-h2 {
-  font-size: 2.4rem;
-  font-size: 24px;
-  font-size: 2.4em;
+:root {
+  font-size: 62.5%;
+  --font-face: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --text-color: #515151;
+  --main-color: lightseagreen;
+  --bg-light: thistle;
+  --bg-dark: tomato;
 }
 
 body {
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  gap: 50vh;
+  justify-content: center;
 }
 
-.hero {
-  background-color: hsl(0, 79%, 90%);
+h3 {
+  font-size: 2.5rem;
+  font-family: var(--font-face);
+  color: var(--text-color);
+  /* text-align: center; */
+}
+
+p {
+  font-family: var(--font-face);
+  font-size: 1.8rem;
+  color: var(--text-color);
+}
+
+.product-card-container {
+  display: flex;
   height: 50vh;
-  padding: 0 10vw;
-  display: grid;
-  grid-template-areas: 'content';
-  place-items: center;
-  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.hero__image {
-  margin: 0;
-  padding: 0;
+.product-card {
+  width: 90vw;
+  max-width: 300px;
+  min-width: 300px;
+  height: 100%;
+  margin: 10px;
+  aspect-ratio: 9 / 16;
+  border: 2px solid var(--main-color);
+  /* gap: 10px; */
+  display: grid;
+  grid-template-rows: 50% auto repeat(2, 1fr);
+  grid-template-areas:
+    'img'
+    'name'
+    'description'
+    'price';
+}
+
+.product-card__img {
+  grid-area: img;
   width: 100%;
   height: 100%;
-  grid-area: content;
   object-fit: cover;
 }
-
-.hero__title {
-  grid-area: content;
-  font-size: 5rem;
+.product-card__name {
+  grid-area: name;
   text-align: center;
-  margin: 1.5em 0;
-  color: white;
-  background-color: hsla(0 0% 0% / 0.65);
-  width: fit-content;
-  height: fit-content;
+  margin: 3% 5%;
 }
-
-.team {
-  display: flex;
-  justify-content: center;
-  width: 90vw;
+.product-card__description {
+  grid-area: description;
+  margin: 0 5%;
+  align-self: flex-start;
+  /* background-color: var(--bg-light); */
 }
-
-.team__img {
-  width: 40vh;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-.travel-card__container {
-  display: flex;
-  justify-content: center;
-  gap: 2vw;
-  padding-bottom: 10vh;
-}
-
-.travel-card__image {
-  height: 40%;
-  width: 100%;
-  aspect-ratio: 1/1;
-}
-
-.travel-card {
-  height: 60vh;
-  border-radius: 10px;
-  aspect-ratio: 3 / 4;
-  border: 1.5px solid hsl(44, 0%, 80%);
-  overflow: hidden;
-  padding-bottom: 5vh;
-  position: relative;
-}
-
-.travel-card__new {
-  font-size: 2rem;
-  color: white;
-  background-color: hsl(270, 50%, 60%);
-  width: fit-content;
-  padding: 0.5em 1.5em;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.travel-card__title {
-  font-size: 4rem;
+.product-card__price {
+  grid-area: price;
+  color: var(--main-color);
+  margin: 0 5%;
+  font-size: 2.1rem;
   text-align: center;
-  margin: 1.5em 0;
-  color: hsl(270, 50%, 60%);
+  align-self: flex-end;
+  /* background-color: var(--bg-dark); */
 }
-
-.travel-card__duration {
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 1em 0;
-  color: hsl(44, 100%, 51%);
-}
-
-.travel-card__price {
-  text-align: center;
-  font-size: 2.5rem;
-  color: hsla(44 100% 50% / 0.65);
-}
-
-.travel-card__price:after {
-  content: '$';
-  padding-left: 0.2em;
+.product-card__price::after {
+  content: 'e';
+  padding-left: 0.5ch;
 }
